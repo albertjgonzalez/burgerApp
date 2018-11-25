@@ -9,15 +9,15 @@ var orm = {
     });
 },
 addBurger: (colInput) =>{
-    var queryString = "INSERT INTO burgers(burger_name, devoured) VALUES(?, False)";
+    var queryString = "INSERT INTO burgers(burger_name, devoured) VALUES(?, FALSE)";
     connection.query(queryString,[colInput],(err,data) =>{
         if (err) console.log(err);
         return data;
     })
 },
-deleteBurger: (burger_id) =>{
+eatBurger: (burger_id) =>{
     console.log('id:'+burger_id)
-    var queryString = 'DELETE FROM burgers WHERE id = ?'
+    var queryString = 'Update burgers SET devoured = TRUE WHERE id = ?'
     connection.query(queryString,[burger_id], (err,data )=>{
         if (err) console.log(err);
         console.log(data)

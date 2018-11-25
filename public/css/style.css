@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+    align-content: center;
+    
+}
+#content{
+    margin: auto;
+    background-color: rgb(126, 126, 216);
+    width: 50%
+}
+#eaten{
+    float: right;
+}
+#notEaten{
+    float: left;
+}

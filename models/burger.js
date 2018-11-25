@@ -10,8 +10,8 @@ var burger = {
     add: (colInput) =>{
         orm.addBurger(colInput);
     },
-    delete: (burger_id) =>{
-    orm.deleteBurger(burger_id);
+    eat: (burger_id) =>{
+    orm.eatBurger(burger_id);
 }
 };
 

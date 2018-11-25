@@ -1,13 +1,22 @@
+<div id='notEaten'>
 <ul>
    {{#each burgers}}
+   {{#unless devoured}}
    <li>
        <p>{{burger_name}}</p>
        <button id={{id}} class="eatBurger"> Eat this burger </button>
    </li>
+   {{/unless}}
    {{/each}}
 </ul>
-<div>
-    <h2> Add a burger</h2>
-    <input id="burgerName" type="text">
-    <button id="addBurger"> add </button>
+</div>
+
+<div id='eaten'>
+{{#each burgers}}
+   {{#if devoured}}
+   <li>
+       <p>{{burger_name}}</p>
+   </li>
+   {{/if}}
+   {{/each}}
 </div>

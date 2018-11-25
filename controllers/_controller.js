@@ -4,6 +4,7 @@ const router = express.Router();
 
 router.get('/',(req,res) =>{
     burger.all((data) =>{
+        
         res.render('index',
         {burgers: data}
         )
@@ -18,10 +19,10 @@ router.post('/addBurger',(req,res) =>{
     res.end()
 })
 
-router.delete('/deleteBurger',(req,res) =>{
+router.put('/eatBurger',(req,res) =>{
     var id = req.body.burger_id
     console.log(id)
-    burger.delete(id, (data) =>{
+    burger.eat(id, (data) =>{
         console.log(data)
     })
     res.end()
